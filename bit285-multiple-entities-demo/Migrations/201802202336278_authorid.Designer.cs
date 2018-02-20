@@ -7,13 +7,13 @@ namespace bit285_multiple_entities_demo.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class fixingpreviousissues : IMigrationMetadata
+    public sealed partial class authorid : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(fixingpreviousissues));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(authorid));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802202230371_fixing previous issues"; }
+            get { return "201802202336278_authorid"; }
         }
         
         string IMigrationMetadata.Source

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,6 +8,7 @@ namespace IndyBooks.Models
 {
     public class Author
     {
+        [Key]
         public int AuthorID { get; set; }
         public int BookID { get; set; }
 

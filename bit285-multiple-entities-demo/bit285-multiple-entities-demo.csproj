@@ -141,13 +141,9 @@
     <Compile Include="Migrations\201802192330219_purchase.Designer.cs">
       <DependentUpon>201802192330219_purchase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802202218486_UpdatedEntities.cs" />
-    <Compile Include="Migrations\201802202218486_UpdatedEntities.Designer.cs">
-      <DependentUpon>201802202218486_UpdatedEntities.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802202230371_fixing previous issues.cs" />
-    <Compile Include="Migrations\201802202230371_fixing previous issues.Designer.cs">
-      <DependentUpon>201802202230371_fixing previous issues.cs</DependentUpon>
+    <Compile Include="Migrations\201802202336278_authorid.cs" />
+    <Compile Include="Migrations\201802202336278_authorid.Designer.cs">
+      <DependentUpon>201802202336278_authorid.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
@@ -187,11 +183,8 @@
     <EmbeddedResource Include="Migrations\201802192330219_purchase.resx">
       <DependentUpon>201802192330219_purchase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802202218486_UpdatedEntities.resx">
-      <DependentUpon>201802202218486_UpdatedEntities.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802202230371_fixing previous issues.resx">
-      <DependentUpon>201802202230371_fixing previous issues.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802202336278_authorid.resx">
+      <DependentUpon>201802202336278_authorid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
