@@ -62,8 +62,49 @@ namespace bit285_multiple_entities_demo.Migrations
 
                 });
             //TODO: Add several Author records
+            context.Authors.AddOrUpdate(a => a.AuthorID,
+                new Author()
+                {
+                    AuthorID = 1,
+                    AuthorName = "Dr.Suess",
+                    AuthorAddress = "123 HAPPY STREET",
+
+
+
+                },
+                new Author()
+                {
+                    AuthorID = 2,
+                    AuthorName = "JK Rawling",
+                    AuthorAddress = "243 Hogwarts Lane",
+                },
+                 new Author()
+                 {
+                     AuthorID = 3,
+                     AuthorName = "Steven King",
+                     AuthorAddress = "254 Cugo Court E",
+                 });
 
             //TODO: Add several Member records
+            context.Members.AddOrUpdate(m => m.MemberID,
+                new Member()
+                {
+                    MemberID = 1,
+                    MemberAddress = "25343 My Dead End",
+                    LengthOfMembership = 7
+                },
+                new Member()
+                {
+                    MemberID = 2,
+                    MemberAddress = "777 harry potter drive",
+                    LengthOfMembership = 2
+                },
+                      new Member()
+                      {
+                          MemberID = 3,
+                          MemberAddress = "15423 Happy Street",
+                          LengthOfMembership = 3
+                      });
 
             //TODO: Add additional Purchase records
             context.Purchases.AddOrUpdate(p => p.PurchaseID,
@@ -71,7 +112,10 @@ namespace bit285_multiple_entities_demo.Migrations
                 {
                     PurchaseID = 1,
                     Amount = 10.00M,
-                    BookID = 6
+                    BookID = 6,
+                    MemberID= 3
+                    
+                    
                     //TODO: Add the MemberID value
                 });
 
