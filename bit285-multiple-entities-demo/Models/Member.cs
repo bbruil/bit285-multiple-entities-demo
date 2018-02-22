@@ -9,13 +9,10 @@ namespace IndyBooks.Models
     {
         public int MemberID { get; set; }
 
-        // TODO: Create at least three  appropriate properties
-        public string MemberName { get; set; }
-        public string MemberAddress { get; set; }
-
-        public int LengthOfMembership { get; set; }
-
-        // TODO: Add Property to represent the entity relationship: "A Member can have many Purchases"
-        public virtual ICollection<Purchase> MemberPurchases { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Name { get { return FirstName + " " + LastName; } }
+        // Property to represent the entity relationship: "A Member can have many Purchases"
+        public ICollection<Purchase> Purchases { get; set; }
     }
 }

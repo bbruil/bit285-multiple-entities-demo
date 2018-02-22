@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using IndyBooks.Models;
+using IndyBooks.ViewModels;
 
 namespace IndyBooks.Controllers
 {
@@ -16,7 +17,11 @@ namespace IndyBooks.Controllers
          */
         public ActionResult Purchase()
         {
-             return View();
+            var pvm = new PurchaseViewModel();  // creates a new viewmodel object and
+            pvm.Books = db.Books;               // assigns values to viewmodel collections
+            pvm.Members = db.Members;
+
+            return View(pvm);
         }
         [HttpPost]
         public ActionResult Purchase(Purchase purchase)
@@ -31,25 +36,26 @@ namespace IndyBooks.Controllers
         }
         /*
          * Book Creation and List
-         * TODO: Update methods and Views to Book create and list Books 
          */
         public ActionResult AddBook()
         {
+            //TODO: Create a new ViewModel object, assign values to its collections, and pass it to the View
+
             return View();
         }
 
         [HttpPost]
         public ActionResult AddBook(Book book)
         {
+            if (ModelState.IsValid)
+            {
+                db.Books.Add(book);
+                db.SaveChanges();
+                return View("Books", db.Books);
+            }
+            //TODO: Update your Book Listing  View to display the Authors Full Name, rather than the AuthorID
             return View();
         }
-        /*
-          * Author Creation and List
-          * TODO: Develop methods and Views to create and list Authors 
-          */
-        /*
-          * Member Creation and List
-          * TODO: Develop methods and Views to create and list Members 
-          */
+
     }
 }
