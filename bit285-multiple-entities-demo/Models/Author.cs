@@ -9,6 +9,7 @@ namespace IndyBooks.Models
     public class Author
     {   [Key]
         public int AuthorID { get; set; }
+        public int BookID { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
