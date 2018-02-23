@@ -40,8 +40,12 @@ namespace IndyBooks.Controllers
         public ActionResult AddBook()
         {
             //TODO: Create a new ViewModel object, assign values to its collections, and pass it to the View
-
-            return View();
+            var bvm = new BookViewModel();
+            bvm.Authors = db.Authors;
+            
+           
+            
+            return View(bvm);
         }
 
         [HttpPost]

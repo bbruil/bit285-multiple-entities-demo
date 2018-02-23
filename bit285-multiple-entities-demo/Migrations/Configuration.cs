@@ -88,7 +88,20 @@ namespace bit285_multiple_entities_demo.Migrations
                     MemberID = 1,
                     FirstName = "Ian",
                     LastName = "Bansenauer"
-                });
+                },
+                
+                new Member()
+                {
+                    MemberID = 2,
+                    FirstName = "Tom",
+                    LastName = "Jone"
+                },
+                  new Member()
+                  {
+                      MemberID = 3,
+                      FirstName = "John",
+                      LastName = "Smith"
+                  });
             //TODO: Seed a few more Purchase records
             context.Purchases.AddOrUpdate(p => p.PurchaseID,
                 new Purchase()
@@ -97,7 +110,21 @@ namespace bit285_multiple_entities_demo.Migrations
                     Amount = 10.00M,
                     BookID = 6,
                     MemberID = 1
-                });
+                },
+                new Purchase()
+                { 
+                   PurchaseID = 2,
+                   Amount = 15.25M,
+                   BookID = 4,
+                   MemberID = 2
+                  },
+                new Purchase()
+                        {
+                  PurchaseID = 3,
+                  Amount = 17.45M,
+                  BookID = 2,
+                  MemberID = 3
+                 });
 
         }
     }
